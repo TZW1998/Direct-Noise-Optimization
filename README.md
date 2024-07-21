@@ -45,7 +45,7 @@ Our method is visualized as follows. The key idea is to observe that the samplin
 conda env create -f environment.yml
 conda activate dno
 ```
-
+**Note** Requiring cuda version to be greater than 11.8. The current code are majorly tested on V100, A800 and A100. We observed that there are some error when running the code on H100 due to some unknown bugs in Pytorch.
 
 
 ## Useful Open-Sourced Pretrained Models
@@ -99,19 +99,21 @@ python dno_stable_diffusion_nograd.py -h
 # Example: running the optimization on 2 GPUs for maximizing jpeg compressibility
 accelerate launch --num_processes 2 dno_stable_diffusion_nograd.py --prompt "white duck" --objective jpeg --lr 0.01
 ```
+**Note**: In this command, we found that there is some unknown error when calling the torch.distributed.all_gather function in our H100 cluster, but it works fine with V100, A100 and A800 clusters.
 
 
 
 ## Running DNO with SDXL
 
-In the last script `dno_sdxl.py` , we provide an example of running DNO with SDXL, which was used to generate the demo above. Note that running this code on a single GPU requires **approximately 50 GB of memory**.
+In the last script `dno_sdxl.py` , we provide an example of running DNO with SDXL, which was used to generate the demo above. Note that running this code on a single GPU with fp32 requires **approximately 40 GB of memory**.
 ```bash
 # see the parameters of the script
 python dno_sdxl.py -h
 
 # A simple example
-python dno_sdxl.py --prompt "white duck" --objective black --lr 0.001
+python dno_sdxl.py --prompt "white duck" --objective black --lr 0.001 --precision fp32
 ```
+**Note**: When using the H100, there is an unknown error in the code with FP16 mixed-precision due to a bug in PyTorch."
 
 
 
