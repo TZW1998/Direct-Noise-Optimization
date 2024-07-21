@@ -1,0 +1,17 @@
+{
+    "model": "/mnt/workspace/workgroup/tangzhiwei.tzw/sdv1-5-full-diffuser",
+    "prompt": "white duck",
+    "num_steps": 50,
+    "eta": 1.0,
+    "guidance_scale": 5.0,
+    "device": "cuda",
+    "seed": 0,
+    "opt_steps": 100,
+    "opt_time": 50,
+    "objective": "black",
+    "precision": "fp16",
+    "gamma": 0.0,
+    "subsample": 1,
+    "lr": 0.001,
+    "output": "output"
+}

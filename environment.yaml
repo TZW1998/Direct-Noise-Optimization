@@ -1,0 +1,33 @@
+name: dno
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.11.5
+  - pytorch
+  - pytorch-cuda=11.8
+  - setuptools
+  - torchaudio
+  - torchtriton
+  - typing_extensions
+  - accelerate
+  - torchvision
+  - jupyterlab
+  - ipykernel
+  - matplotlib
+  - pip:
+    - ml-collections
+    - absl-py
+    - diffusers[torch]
+    - transformers
+    - inflect
+    - pydantic
+    - ipdb
+    - matplotlib
+    - accelerate
+    - timm
+    - jupyterlab
+    - open_clip_torch
