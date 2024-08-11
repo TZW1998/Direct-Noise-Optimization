@@ -1,23 +1,23 @@
 # Direct-Noise-Optimization (DNO) for Inference-Time Alignment of Diffusion Generative Models
 
-This is the official repo for the paper "Tuning-Free Alignment of Diffusion Models with Direct Noise Optimization" Tang et al. 
 
-[arxiv version](https://arxiv.org/abs/2405.18881)
-
-
-
-# News 🔥
-
-* **2024/07/*20***: The major codebase and a tutorial on DNO are released.  🔥🔥
-* **2024/06/16**: A short version of this paper is accepted to 2nd SPIGM workshop @ ICML 2024. 🔥🔥
 
 
 
 # Demo: Aligning the output of SDXL with DNO
 
-Our proposed method can align the output of SDXL with DNO **within 10 minutes** on a single 80GB A100 GPU. The following demo shows the evolution of images during the alignment process.
+Our proposed method can align the output of SDXL with DNO **within 10 minutes** on a single 40GB A100 GPU. The following demo shows the evolution of images during the alignment process.
 
 ![demo](assets/main_demo.jpg)
+
+We collected four popular prompts from Reddit for generating the images above:
+
+* Image Ligntness: "dark alley, night, moon Cinematic light, intricate detail, high detail, sharp focus, smooth, aesthetic, extremely detailed"
+* Image Darkness: "1970s baseball player, hyperdetailed, soft light, sharp, best quality, masterpiece, realistic, Canon EOS R3, 20 megapixels."
+* Aesthetic Score: "a rabbit, wildlife photography, photograph, high quality, wildlife, f 1.8, soft focus, 8k, national geographic, award - winning photograph by nick nichols."
+* Pick Score: "A beef steak, depth of field, bokeh, soft light, by Yasmin Albatoul, Harry Fayt, centered, extremely detailed, Nikon D850, award winning photography."
+
+
 
 
 
@@ -195,30 +195,4 @@ python dno_stable_diffusion.py --prompt "white duck" --objective A_Short_Name_Fo
 ```
 
 
-
-# If you found this code useful, please cite our paper:
-
-
-```latex
-# A short version in ICML 2024 Workshop
-@inproceedings{
-tang2024tuningfree,
-title={Tuning-Free Alignment of  Diffusion Models with Direct Noise Optimization},
-author={Zhiwei Tang and Jiangweizhi Peng and Jiasheng Tang and Mingyi Hong and Fan Wang and Tsung-Hui Chang},
-booktitle={ICML 2024 Workshop on Structured Probabilistic Inference {\&} Generative Modeling},
-year={2024},
-url={https://openreview.net/forum?id=Dqpa8rbL39}
-}
-
-# Full Arxiv version
-@misc{tang2024tuningfreealignmentdiffusionmodels,
-      title={Tuning-Free Alignment of Diffusion Models with Direct Noise Optimization}, 
-      author={Zhiwei Tang and Jiangweizhi Peng and Jiasheng Tang and Mingyi Hong and Fan Wang and Tsung-Hui Chang},
-      year={2024},
-      eprint={2405.18881},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2405.18881}, 
-}
-```
 
