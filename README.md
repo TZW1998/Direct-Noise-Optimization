@@ -1,4 +1,4 @@
-# Direct-Noise-Optimization (DNO) for Inference-Time Alignment of Diffusion Generative Models
+# Direct-Noise-Optimization (DNO) for Inference-Time Alignment of Diffusion Generative Models （ICML 2025）
 
 
 
